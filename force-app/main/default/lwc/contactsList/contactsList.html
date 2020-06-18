@@ -1,0 +1,14 @@
+<template>
+    <div style="height: 300px;">
+        <lightning-datatable
+                key-field="id"
+                data={contactData}
+                columns={contactColumns}
+                onrowselection={handleSelect}>
+        </lightning-datatable>
+        <lightning-button
+            label="Delete"
+            onclick={handleDelete}>
+        </lightning-button>
+    </div>  
+</template>
