@@ -1,7 +1,7 @@
 public with sharing class ContactListHandler {
     @AuraEnabled(cacheable = true)
     public static List<Contact> getAllContacts() {
-    	return [SELECT Id, Name, Email, Account.Name FROM Contact];
+    	return [SELECT Id, Name, Email, Account.Name FROM Contact ORDER BY Name];
     }
 
     @AuraEnabled
