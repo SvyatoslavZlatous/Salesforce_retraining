@@ -16,4 +16,15 @@ public class URLBuilderTest {
         System.assertEquals(expectedURL, builder.build(), 'The generated URLs are not equal');
         
     }
+
+    @isTest
+    static void testURLBuilderShoudThrowIllegalArgumentException() {
+        String expectedErrorMsg = 'The input URL could not be null';
+        try {
+            URLBuilder builder = new URLBuilder(null);
+        } catch(IllegalArgumentException ex) {
+            System.assertEquals(expectedErrorMsg, ex.getMessage(), 
+                                'The URLBuilder cannot be constructed with nullable input URL');
+        }
+    }
 }
