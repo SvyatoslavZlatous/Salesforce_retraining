@@ -1,0 +1,15 @@
+.weatherList {
+    width : auto;
+    height: 25em;
+    font-size: 2.5em;
+    padding-top: 2.5%;
+    overflow-y: scroll;
+}
+
+.tempEntry {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.1em inset rgba(196, 185, 185, 0.664) ;
+}
+
+

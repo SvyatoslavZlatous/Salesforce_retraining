@@ -1,0 +1,17 @@
+<template >
+    <template if:true={propertiesWired}>
+        <div>
+            <lightning-card title="Weather Forecast" icon-name="custom:custom14">
+                <ul class="slds-m-around_medium weatherList">
+                    <template for:each={weatherEntries} for:item="temp">
+                        <li key={temp.dateTime}>
+                            <div class='tempEntry'>
+                                <p class='temp'>{temp.dateTime}</p> <p class='temp'>{temp.temperature} °</p>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </lightning-card>
+        </div>
+    </template>
+</template>
